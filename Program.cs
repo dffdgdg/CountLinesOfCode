@@ -5,8 +5,6 @@ using TextCopy;
 Console.InputEncoding = Encoding.UTF8;
 Console.OutputEncoding = Encoding.UTF8;
 
-// === НАСТРОЙКИ ===
-
 string projectPath = "C:\\Users\\laptop\\source\\repos\\Messenger\\MessengerAPI\\";
 
 HashSet<string> targetExtensions = [".cs", ".axaml", ".xaml"];
@@ -14,8 +12,6 @@ HashSet<string> targetExtensions = [".cs", ".axaml", ".xaml"];
 HashSet<string> ignoredDirectories = ["Model","bin", "obj", ".git", ".vs", ".idea", "Assets", "Migrations"];
 
 HashSet<string> ignoredFiles = ["GlobalUsings.cs", "AssemblyInfo.cs"];
-
-// === ЛОГИКА ===
 
 Console.WriteLine($"Сканирование директории: {projectPath}");
 
@@ -54,8 +50,6 @@ catch
     Console.WriteLine($"Не удалось скопировать в буфер. Результат сохранён в context.txt");
     Console.ResetColor();
 }
-
-// --- МЕТОДЫ ---
 
 void ProcessDirectory(string targetDirectory)
 {
